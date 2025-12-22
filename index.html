@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Shivam Patel | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Shivam Patel — CS student building Java/Python projects and Microsoft 365 automations." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="assets/favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="reveal" data-anim="fade" data-onload data-delay="0">
+    <h1>Shivam Patel</h1>
+    <p>Computer Science Student · Aspiring Software Engineer · Open to Learning and Building</p>
+    <nav>
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">Resume</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero reveal" data-anim="up" data-onload data-delay="120">
+      <img src="assets/profile.jpeg" alt="Shivam Patel" class="profile-pic" />
+      <h2>Hi, I'm Shivam 👋</h2>
+      <p>
+        I build efficient, user-focused software with Java & Python, and automate workflows on Microsoft 365 (Power Automate, SharePoint, Intune, Azure AD).
+      </p>
+
+      <div class="cta-row">
+        <a class="btn btn-primary" href="projects.html">See my projects</a>
+        <a class="btn btn-ghost" href="about.html">Download resume</a>
+        <a class="btn btn-ghost" href="contact.html">Contact me</a>
+      </div>
+
+      <div class="hero-stats">
+        <div><span class="stat">8+</span><span class="label">Completed builds</span></div>
+        <div><span class="stat">3</span><span class="label">Automation flows</span></div>
+        <div><span class="stat">2027</span><span class="label">CS graduation</span></div>
+      </div>
+    </section>
+
+    <section class="about-me reveal" data-anim="scale" data-delay="180">
+      <h2>Tech stack</h2>
+      <div class="chip-row">
+        <span class="chip">Java</span><span class="chip">Python</span><span class="chip">HTML</span>
+        <span class="chip">CSS</span><span class="chip">JavaScript</span><span class="chip">Power Automate</span>
+        <span class="chip">Azure AD</span><span class="chip">Intune</span><span class="chip">SharePoint</span>
+      </div>
+    </section>
+  </main>
+
+  <footer class="reveal" data-anim="fade" data-delay="120">
+    <p>© 2025 Shivam Patel · <a href="contact.html">Get in touch</a></p>
+  </footer>
+
+  <script>
+    // On-load reveals
+    window.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.reveal[data-onload]').forEach(el => {
+        const d = el.getAttribute('data-delay');
+        if (d) el.style.setProperty('--delay', d + 'ms');
+        el.classList.add('show');
+      });
+    });
+    // Scroll reveals
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          const d = e.target.getAttribute('data-delay');
+          if (d) e.target.style.setProperty('--delay', d + 'ms');
+          e.target.classList.add('show');
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.reveal:not(.show)').forEach(el => io.observe(el));
+  </script>
+</body>
+</html>

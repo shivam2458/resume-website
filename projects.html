@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Projects | Shivam Patel</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="assets/favicon.png">
+</head>
+<body>
+  <header class="reveal" data-anim="fade" data-onload>
+    <h1>Projects</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">Resume</a>
+      <a href="projects.html" class="active">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="filters reveal" data-anim="fade" data-onload>
+      <button class="pill active" data-filter="all">All</button>
+      <button class="pill" data-filter="java">Java</button>
+      <button class="pill" data-filter="automation">Automation</button>
+      <button class="pill" data-filter="other">Other</button>
+    </div>
+
+    <div class="card-grid">
+      <article class="card reveal" data-anim="up" data-delay="0" data-tags="java">
+        <h3>Text-Based RPG (Java)</h3>
+        <p>OOP design, battle system, save/load files.</p>
+        <div class="tags"><span>Java</span><span>OOP</span></div>
+        <a class="btn btn-small" href="https://github.com/shivam2458" target="_blank" rel="noopener">View code</a>
+      </article>
+
+      <article class="card reveal" data-anim="up" data-delay="80" data-tags="automation">
+        <h3>Offboarding Flow (Power Automate)</h3>
+        <p>SharePoint + email + ticket creation; reduced manual effort by ~70%.</p>
+        <div class="tags"><span>Power Automate</span><span>SharePoint</span></div>
+      </article>
+
+      <article class="card reveal" data-anim="up" data-delay="160" data-tags="other">
+        <h3>Student Records App</h3>
+        <p>File I/O, ArrayLists, menu-driven CLI; clean UX.</p>
+        <div class="tags"><span>Java</span><span>CLI</span></div>
+      </article>
+
+      <article class="card reveal" data-anim="up" data-delay="240" data-tags="java">
+        <h3>Java Data Structures Library (From Scratch)</h3>
+        <p>Implemented core data structures in Java 17 with Maven + JUnit: Linked List, Stack, Queue (circular),
+          BST (insert/search/remove), and HashMap (separate chaining + resize).
+        </p>
+        <div class="tags"><span>Java</span><span>Maven</span><span>JUnit</span><span>DSA</span></div>
+        <a class="btn btn-small" href="https://github.com/shivam2458/java-dsa-library" target="_blank" rel="noopener">
+        View code</a>
+      </article>
+
+    </div>
+  </main>
+
+  <footer class="reveal" data-anim="fade" data-delay="100">
+    <p>© 2025 Shivam Patel</p>
+  </footer>
+
+  <script>
+    // onload reveals
+    window.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.reveal[data-onload]').forEach(el => el.classList.add('show'));
+    });
+
+    // filter logic
+    const pills = document.querySelectorAll('.pill');
+    const cards = document.querySelectorAll('.card');
+    pills.forEach(p => p.addEventListener('click', () => {
+      pills.forEach(x => x.classList.remove('active'));
+      p.classList.add('active');
+      const f = p.dataset.filter;
+      cards.forEach(c => {
+        const show = f === 'all' || (c.dataset.tags || '').includes(f);
+        c.style.display = show ? '' : 'none';
+      });
+    }));
+
+    // scroll reveals
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('show'); io.unobserve(e.target); }});
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.reveal:not(.show)').forEach(el => io.observe(el));
+  </script>
+</body>
+</html>

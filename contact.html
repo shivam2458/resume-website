@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Contact | Shivam Patel</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="assets/favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header class="reveal" data-anim="fade" data-onload>
+    <h1>Contact</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">Resume</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+  </header>
+
+  <main class="container reveal" data-anim="up" data-onload data-delay="80">
+    <h2>Get in touch</h2>
+    <p>If you'd like to connect, feel free to email me or find me on LinkedIn and GitHub.</p>
+
+    <ul class="contact-list">
+      <li>
+        <i class="fas fa-envelope"></i>
+        <a href="mailto:shivampatel2458@yahoo.com">shivampatel2458@yahoo.com</a>
+      </li>
+      <li>
+        <i class="fab fa-linkedin"></i>
+        <a href="https://www.linkedin.com/in/shivam-patel-252092273" target="_blank" rel="noopener">LinkedIn Profile</a>
+      </li>
+      <li>
+        <i class="fab fa-github"></i>
+        <a href="https://github.com/shivam2458" target="_blank" rel="noopener">GitHub Profile</a>
+      </li>
+    </ul>
+  </main>
+
+  <footer class="reveal" data-anim="fade" data-delay="100">
+    <p>© 2025 Shivam Patel</p>
+  </footer>
+
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.reveal[data-onload]').forEach(el => el.classList.add('show'));
+    });
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('show'); io.unobserve(e.target); }});
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.reveal:not(.show)').forEach(el => io.observe(el));
+  </script>
+</body>
+</html>
