@@ -1,107 +1,464 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
+
   <title>Projects | Shivam Patel</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  />
+
+  <meta
+    name="description"
+    content="Software engineering projects by Shivam Patel using Java, Spring Boot, Python, Flask, PostgreSQL, SQL, REST APIs, and machine learning."
+  />
+
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="assets/favicon.png">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
 </head>
+
+
 <body>
-  <header class="reveal" data-anim="fade" data-onload>
+
+  <!-- HEADER -->
+  <header
+    class="reveal"
+    data-anim="fade"
+    data-onload
+  >
+
     <h1>Projects</h1>
+
+    <p>
+      Software projects I've built and projects currently in development
+    </p>
+
     <nav>
       <a href="index.html">Home</a>
       <a href="about.html">Resume</a>
       <a href="projects.html" class="active">Projects</a>
       <a href="contact.html">Contact</a>
     </nav>
+
   </header>
 
+
+  <!-- MAIN -->
   <main class="container">
-    <div class="filters reveal" data-anim="fade" data-onload>
-      <button class="pill active" data-filter="all">All</button>
-      <button class="pill" data-filter="java">Java</button>
-      <button class="pill" data-filter="automation">Automation</button>
-      <button class="pill" data-filter="other">Other</button>
+
+    <h2
+      class="reveal"
+      data-anim="up"
+      data-onload
+    >
+      My Projects
+    </h2>
+
+    <p
+      class="reveal"
+      data-anim="up"
+      data-onload
+    >
+      A collection of projects I've built through personal development,
+      coursework, and hands-on software engineering practice.
+    </p>
+
+
+    <!-- FILTERS -->
+    <div
+      class="filters reveal"
+      data-anim="fade"
+      data-onload
+    >
+
+      <button
+        class="pill active"
+        data-filter="all"
+      >
+        All
+      </button>
+
+      <button
+        class="pill"
+        data-filter="java"
+      >
+        Java
+      </button>
+
+      <button
+        class="pill"
+        data-filter="python"
+      >
+        Python
+      </button>
+
+      <button
+        class="pill"
+        data-filter="database"
+      >
+        Database
+      </button>
+
+      <button
+        class="pill"
+        data-filter="ml"
+      >
+        Machine Learning
+      </button>
+
     </div>
 
+
+
+    <!-- PROJECT CARDS -->
     <div class="card-grid">
-      <article class="card reveal" data-anim="up" data-delay="0" data-tags="java">
-        <h3>Text-Based RPG (Java)</h3>
-        <p>OOP design, battle system, save/load files.</p>
-        <div class="tags"><span>Java</span><span>OOP</span></div>
-        <a class="btn btn-small" href="https://github.com/shivam2458" target="_blank" rel="noopener">View code</a>
-      </article>
 
-      <article class="card reveal" data-anim="up" data-delay="80" data-tags="automation">
-        <h3>Offboarding Flow (Power Automate)</h3>
-        <p>SharePoint + email + ticket creation; reduced manual effort by ~70%.</p>
-        <div class="tags"><span>Power Automate</span><span>SharePoint</span></div>
-      </article>
 
-      <article class="card reveal" data-anim="up" data-delay="160" data-tags="other">
-        <h3>Student Records App</h3>
-        <p>File I/O, ArrayLists, menu-driven CLI; clean UX.</p>
-        <div class="tags"><span>Java</span><span>CLI</span></div>
-      </article>
+      <!-- JOBFIT SHIELD -->
+      <article
+        class="card reveal"
+        data-anim="up"
+        data-delay="0"
+        data-tags="java database"
+      >
 
-      <article class="card reveal" data-anim="up" data-delay="240" data-tags="java">
-        <h3>Java Data Structures Library (From Scratch)</h3>
-        <p>Implemented core data structures in Java 17 with Maven + JUnit: Linked List, Stack, Queue (circular),
-          BST (insert/search/remove), and HashMap (separate chaining + resize).
+        <h3>JobFit Shield</h3>
+
+        <p>
+          A full-stack career platform designed to help students and job
+          seekers evaluate job postings, compare jobs against their
+          resumes, identify potentially suspicious job listings, and
+          organize job applications.
         </p>
-        <div class="tags"><span>Java</span><span>Maven</span><span>JUnit</span><span>DSA</span></div>
-        <a class="btn btn-small" href="https://github.com/shivam2458/java-dsa-library" target="_blank" rel="noopener">
-        View code</a>
+
+        <p>
+          The backend is being developed with Java and Spring Boot using
+          PostgreSQL for data storage. The project includes user
+          management and is being expanded with authentication, job
+          analysis, resume matching, application tracking, and scoring
+          features.
+        </p>
+
+        <div class="tags">
+          <span>Java</span>
+          <span>Spring Boot</span>
+          <span>PostgreSQL</span>
+          <span>REST API</span>
+          <span>JPA</span>
+        </div>
+
+        <a
+          class="btn btn-small"
+          href="https://github.com/shivam2458/JobFit_Shield"
+          target="_blank"
+          rel="noopener"
+        >
+          View Code
+        </a>
+
       </article>
 
-      <article class="card reveal" data-anim="up" data-delay="240" data-tags="java">
-  <h3>Java Data Structures Library (From Scratch)</h3>
-  <p>
-    Implemented core data structures in Java 17 with Maven + JUnit: Linked List, Stack, Queue (circular),
-    BST (insert/search/remove), and HashMap (separate chaining + resize).
-  </p>
-  <div class="tags">
-    <span>Java</span><span>Maven</span><span>JUnit</span><span>DSA</span>
-  </div>
-  <a class="btn btn-small" href="https://github.com/shivam2458/java-dsa-library" target="_blank" rel="noopener">
-    View code
-  </a>
-</article>
+
+
+      <!-- REST API -->
+      <article
+        class="card reveal"
+        data-anim="up"
+        data-delay="80"
+        data-tags="java database"
+      >
+
+        <h3>REST API with Authentication</h3>
+
+        <p>
+          Backend REST API built with Spring Boot featuring user
+          authentication and role-based access control.
+        </p>
+
+        <p>
+          The project helped me practice backend architecture,
+          authentication concepts, API development, request handling,
+          and securing application endpoints.
+        </p>
+
+        <div class="tags">
+          <span>Java</span>
+          <span>Spring Boot</span>
+          <span>JWT</span>
+          <span>REST API</span>
+          <span>Maven</span>
+        </div>
+
+      </article>
+
+
+
+      <!-- CAMPUS LOST AND FOUND -->
+      <article
+        class="card reveal"
+        data-anim="up"
+        data-delay="160"
+        data-tags="python database"
+      >
+
+        <h3>Campus Lost &amp; Found</h3>
+
+        <p>
+          A web application that allows students to report and search
+          for lost and found items around campus.
+        </p>
+
+        <p>
+          Built as a team project using Flask and SQLite. I worked on
+          CRUD functionality, student login features, database
+          integration, and helped coordinate development within the team.
+        </p>
+
+        <div class="tags">
+          <span>Python</span>
+          <span>Flask</span>
+          <span>SQLite</span>
+          <span>HTML</span>
+          <span>CSS</span>
+        </div>
+
+      </article>
+
+
+
+      <!-- DATA STRUCTURES -->
+      <article
+        class="card reveal"
+        data-anim="up"
+        data-delay="240"
+        data-tags="java"
+      >
+
+        <h3>Java Data Structures Library</h3>
+
+        <p>
+          Implemented fundamental data structures from scratch in Java
+          to strengthen my understanding of data structures,
+          object-oriented programming, and algorithmic thinking.
+        </p>
+
+        <p>
+          Implementations include linked lists, stacks, queues, binary
+          search trees, and hash maps, with testing using JUnit and
+          project management through Maven.
+        </p>
+
+        <div class="tags">
+          <span>Java</span>
+          <span>Data Structures</span>
+          <span>JUnit</span>
+          <span>Maven</span>
+          <span>OOP</span>
+        </div>
+
+        <a
+          class="btn btn-small"
+          href="https://github.com/shivam2458/java-dsa-library"
+          target="_blank"
+          rel="noopener"
+        >
+          View Code
+        </a>
+
+      </article>
+
+
+
+      <!-- FAKE JOB DETECTOR -->
+      <article
+        class="card reveal"
+        data-anim="up"
+        data-delay="320"
+        data-tags="java database"
+      >
+
+        <h3>Fake Job Detector</h3>
+
+        <p>
+          Backend application created to explore how software can help
+          identify potentially fraudulent job postings.
+        </p>
+
+        <p>
+          Built with Spring Boot and PostgreSQL with a JobPosting data
+          model and REST endpoints for creating and retrieving job
+          posting information.
+        </p>
+
+        <div class="tags">
+          <span>Java</span>
+          <span>Spring Boot</span>
+          <span>PostgreSQL</span>
+          <span>REST API</span>
+        </div>
+
+      </article>
+
+
+
+      <!-- MACHINE LEARNING -->
+      <article
+        class="card reveal"
+        data-anim="up"
+        data-delay="400"
+        data-tags="python ml"
+      >
+
+        <h3>Machine Learning Classification</h3>
+
+        <p>
+          Machine learning coursework focused on building and comparing
+          classification models using real datasets.
+        </p>
+
+        <p>
+          Worked with Decision Trees, Naive Bayes, Random Forest,
+          K-Nearest Neighbors, Multi-Layer Perceptrons, and Support
+          Vector Machines while evaluating model performance.
+        </p>
+
+        <div class="tags">
+          <span>Python</span>
+          <span>scikit-learn</span>
+          <span>Machine Learning</span>
+          <span>Classification</span>
+        </div>
+
+      </article>
 
 
     </div>
+
   </main>
 
-  <footer class="reveal" data-anim="fade" data-delay="100">
-    <p>© 2025 Shivam Patel</p>
+
+
+  <!-- FOOTER -->
+  <footer
+    class="reveal"
+    data-anim="fade"
+    data-delay="100"
+  >
+
+    <p>
+      © 2026 Shivam Patel ·
+      <a href="contact.html">Get in touch</a>
+    </p>
+
   </footer>
 
+
+
   <script>
-    // onload reveals
+
+    // Show elements when page loads
     window.addEventListener('DOMContentLoaded', () => {
-      document.querySelectorAll('.reveal[data-onload]').forEach(el => el.classList.add('show'));
+
+      document
+        .querySelectorAll('.reveal[data-onload]')
+        .forEach(el => {
+
+          const delay = el.getAttribute('data-delay');
+
+          if (delay) {
+            el.style.setProperty('--delay', delay + 'ms');
+          }
+
+          el.classList.add('show');
+
+        });
+
     });
 
-    // filter logic
-    const pills = document.querySelectorAll('.pill');
-    const cards = document.querySelectorAll('.card');
-    pills.forEach(p => p.addEventListener('click', () => {
-      pills.forEach(x => x.classList.remove('active'));
-      p.classList.add('active');
-      const f = p.dataset.filter;
-      cards.forEach(c => {
-        const show = f === 'all' || (c.dataset.tags || '').includes(f);
-        c.style.display = show ? '' : 'none';
-      });
-    }));
 
-    // scroll reveals
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('show'); io.unobserve(e.target); }});
-    }, { threshold: 0.08 });
-    document.querySelectorAll('.reveal:not(.show)').forEach(el => io.observe(el));
+
+    // Project filtering
+    const pills = document.querySelectorAll('.pill');
+
+    const cards = document.querySelectorAll('.card');
+
+
+    pills.forEach(pill => {
+
+      pill.addEventListener('click', () => {
+
+        pills.forEach(item => {
+          item.classList.remove('active');
+        });
+
+        pill.classList.add('active');
+
+        const filter = pill.dataset.filter;
+
+
+        cards.forEach(card => {
+
+          const tags = card.dataset.tags || '';
+
+          const show =
+            filter === 'all' ||
+            tags.includes(filter);
+
+          card.style.display =
+            show ? '' : 'none';
+
+        });
+
+      });
+
+    });
+
+
+
+    // Scroll animation
+    const observer = new IntersectionObserver((entries) => {
+
+      entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+
+          const delay =
+            entry.target.getAttribute('data-delay');
+
+          if (delay) {
+            entry.target.style.setProperty(
+              '--delay',
+              delay + 'ms'
+            );
+          }
+
+          entry.target.classList.add('show');
+
+          observer.unobserve(entry.target);
+
+        }
+
+      });
+
+    }, {
+      threshold: 0.08
+    });
+
+
+    document
+      .querySelectorAll('.reveal:not(.show)')
+      .forEach(el => observer.observe(el));
+
   </script>
+
 </body>
+
 </html>
