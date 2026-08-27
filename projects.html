@@ -13,7 +13,7 @@
 
   <meta
     name="description"
-    content="Software engineering projects by Shivam Patel using Java, Spring Boot, Python, Flask, PostgreSQL, SQL, REST APIs, and machine learning."
+    content="Software engineering projects by Shivam Patel using Java, Spring Boot, Python, Flask, PostgreSQL, SQLite, REST APIs, and web technologies."
   />
 
   <link rel="stylesheet" href="style.css" />
@@ -38,7 +38,8 @@
     <h1>Projects</h1>
 
     <p>
-      Software projects I've built and projects currently in development
+      Software projects I've built through coursework,
+      personal development, and hands-on practice
     </p>
 
     <nav>
@@ -49,6 +50,7 @@
     </nav>
 
   </header>
+
 
 
   <!-- MAIN -->
@@ -67,9 +69,11 @@
       data-anim="up"
       data-onload
     >
-      A collection of projects I've built through personal development,
-      coursework, and hands-on software engineering practice.
+      These projects represent my experience with backend development,
+      full-stack applications, databases, REST APIs, authentication,
+      and software engineering fundamentals.
     </p>
+
 
 
     <!-- FILTERS -->
@@ -107,13 +111,6 @@
         Database
       </button>
 
-      <button
-        class="pill"
-        data-filter="ml"
-      >
-        Machine Learning
-      </button>
-
     </div>
 
 
@@ -122,104 +119,27 @@
     <div class="card-grid">
 
 
-      <!-- JOBFIT SHIELD -->
+      <!-- CAMPUS LOST & FOUND SYSTEM -->
       <article
         class="card reveal"
         data-anim="up"
         data-delay="0"
-        data-tags="java database"
-      >
-
-        <h3>JobFit Shield</h3>
-
-        <p>
-          A full-stack career platform designed to help students and job
-          seekers evaluate job postings, compare jobs against their
-          resumes, identify potentially suspicious job listings, and
-          organize job applications.
-        </p>
-
-        <p>
-          The backend is being developed with Java and Spring Boot using
-          PostgreSQL for data storage. The project includes user
-          management and is being expanded with authentication, job
-          analysis, resume matching, application tracking, and scoring
-          features.
-        </p>
-
-        <div class="tags">
-          <span>Java</span>
-          <span>Spring Boot</span>
-          <span>PostgreSQL</span>
-          <span>REST API</span>
-          <span>JPA</span>
-        </div>
-
-        <a
-          class="btn btn-small"
-          href="https://github.com/shivam2458/JobFit_Shield"
-          target="_blank"
-          rel="noopener"
-        >
-          View Code
-        </a>
-
-      </article>
-
-
-
-      <!-- REST API -->
-      <article
-        class="card reveal"
-        data-anim="up"
-        data-delay="80"
-        data-tags="java database"
-      >
-
-        <h3>REST API with Authentication</h3>
-
-        <p>
-          Backend REST API built with Spring Boot featuring user
-          authentication and role-based access control.
-        </p>
-
-        <p>
-          The project helped me practice backend architecture,
-          authentication concepts, API development, request handling,
-          and securing application endpoints.
-        </p>
-
-        <div class="tags">
-          <span>Java</span>
-          <span>Spring Boot</span>
-          <span>JWT</span>
-          <span>REST API</span>
-          <span>Maven</span>
-        </div>
-
-      </article>
-
-
-
-      <!-- CAMPUS LOST AND FOUND -->
-      <article
-        class="card reveal"
-        data-anim="up"
-        data-delay="160"
         data-tags="python database"
       >
 
-        <h3>Campus Lost &amp; Found</h3>
+        <h3>Campus Lost &amp; Found System</h3>
 
         <p>
-          A web application that allows students to report and search
-          for lost and found items around campus.
+          Led a 3-member team to design and deliver a full-stack web
+          application for reporting, searching, and managing lost and
+          found items on campus.
         </p>
 
         <p>
-          Built as a team project using Flask and SQLite. I worked on
-          CRUD functionality, student login features, database
-          integration, and helped coordinate development within the team.
+          Architected backend routing and the database schema using Flask
+          and SQLite, while implementing CRUD operations, search
+          functionality, and user workflows. Presented the completed
+          application to faculty.
         </p>
 
         <div class="tags">
@@ -228,50 +148,71 @@
           <span>SQLite</span>
           <span>HTML</span>
           <span>CSS</span>
+          <span>JavaScript</span>
+          <span>Git</span>
         </div>
 
       </article>
 
 
 
-      <!-- DATA STRUCTURES -->
+      <!-- REST API WITH AUTHENTICATION -->
       <article
         class="card reveal"
         data-anim="up"
-        data-delay="240"
+        data-delay="80"
         data-tags="java"
       >
 
-        <h3>Java Data Structures Library</h3>
+        <h3>REST API with Authentication</h3>
 
         <p>
-          Implemented fundamental data structures from scratch in Java
-          to strengthen my understanding of data structures,
-          object-oriented programming, and algorithmic thinking.
+          Built a secure RESTful API using Spring Boot with JWT-based
+          authentication and role-based access control.
         </p>
 
         <p>
-          Implementations include linked lists, stacks, queues, binary
-          search trees, and hash maps, with testing using JUnit and
-          project management through Maven.
+          Designed a layered architecture with protected endpoints,
+          input validation, and structured request and response handling.
         </p>
 
         <div class="tags">
           <span>Java</span>
-          <span>Data Structures</span>
-          <span>JUnit</span>
-          <span>Maven</span>
-          <span>OOP</span>
+          <span>Spring Boot</span>
+          <span>JWT</span>
+          <span>REST API</span>
         </div>
 
-        <a
-          class="btn btn-small"
-          href="https://github.com/shivam2458/java-dsa-library"
-          target="_blank"
-          rel="noopener"
-        >
-          View Code
-        </a>
+      </article>
+
+
+
+      <!-- INTERNSHIP TRACKER APP -->
+      <article
+        class="card reveal"
+        data-anim="up"
+        data-delay="160"
+        data-tags="python"
+      >
+
+        <h3>Internship Tracker App</h3>
+
+        <p>
+          Developed a Flask web application to organize and track
+          internship applications throughout the job-search process.
+        </p>
+
+        <p>
+          Implemented CRUD operations and persistent data storage,
+          allowing application information to be created, viewed,
+          updated, and deleted.
+        </p>
+
+        <div class="tags">
+          <span>Python</span>
+          <span>Flask</span>
+          <span>CRUD</span>
+        </div>
 
       </article>
 
@@ -281,21 +222,22 @@
       <article
         class="card reveal"
         data-anim="up"
-        data-delay="320"
+        data-delay="240"
         data-tags="java database"
       >
 
         <h3>Fake Job Detector</h3>
 
         <p>
-          Backend application created to explore how software can help
-          identify potentially fraudulent job postings.
+          Developed a backend application focused on analyzing job
+          posting information and building the foundation for identifying
+          potentially fraudulent job listings.
         </p>
 
         <p>
-          Built with Spring Boot and PostgreSQL with a JobPosting data
-          model and REST endpoints for creating and retrieving job
-          posting information.
+          Built the backend with Spring Boot and PostgreSQL, designed
+          the JobPosting data model, and implemented REST endpoints
+          for creating and retrieving job posting data.
         </p>
 
         <div class="tags">
@@ -303,38 +245,6 @@
           <span>Spring Boot</span>
           <span>PostgreSQL</span>
           <span>REST API</span>
-        </div>
-
-      </article>
-
-
-
-      <!-- MACHINE LEARNING -->
-      <article
-        class="card reveal"
-        data-anim="up"
-        data-delay="400"
-        data-tags="python ml"
-      >
-
-        <h3>Machine Learning Classification</h3>
-
-        <p>
-          Machine learning coursework focused on building and comparing
-          classification models using real datasets.
-        </p>
-
-        <p>
-          Worked with Decision Trees, Naive Bayes, Random Forest,
-          K-Nearest Neighbors, Multi-Layer Perceptrons, and Support
-          Vector Machines while evaluating model performance.
-        </p>
-
-        <div class="tags">
-          <span>Python</span>
-          <span>scikit-learn</span>
-          <span>Machine Learning</span>
-          <span>Classification</span>
         </div>
 
       </article>
@@ -458,6 +368,7 @@
       .forEach(el => observer.observe(el));
 
   </script>
+
 
 </body>
 
