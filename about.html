@@ -1,56 +1,295 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
+
   <title>Resume | Shivam Patel</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  />
+
+  <meta
+    name="description"
+    content="Resume and technical background of Shivam Patel, a Computer Science student focused on software engineering, backend development, APIs, and databases."
+  />
+
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="assets/favicon.png">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
 </head>
+
+
 <body>
-  <header class="reveal" data-anim="fade" data-onload>
+
+  <!-- HEADER -->
+  <header
+    class="reveal"
+    data-anim="fade"
+    data-onload
+  >
+
     <h1>Resume</h1>
+
+    <p>
+      Education, technical skills, and software engineering background
+    </p>
+
     <nav>
       <a href="index.html">Home</a>
       <a href="about.html" class="active">Resume</a>
       <a href="projects.html">Projects</a>
       <a href="contact.html">Contact</a>
     </nav>
+
   </header>
 
-  <main class="container reveal" data-anim="up" data-onload data-delay="80">
-    <h2>Education</h2>
-    <ul>
-      <li>
-        <strong>Cleveland State University</strong><br />
-        B.S. in Computer Science (Expected April 2027)
-      </li>
-    </ul>
 
-    <h2>Skills</h2>
-    <ul>
-      <li>Languages: Java, Python, HTML, CSS, JavaScript</li>
-      <li>Tools: Git, VS Code, IntelliJ IDEA, Power Automate</li>
-      <li>Platforms: Microsoft Intune, Azure AD, SharePoint</li>
-    </ul>
 
-    <h2>Resume</h2>
-    <a href="assets/resume.pdf" target="_blank" class="btn btn-primary">Download PDF Resume</a>
+  <!-- MAIN -->
+  <main
+    class="container reveal"
+    data-anim="up"
+    data-onload
+    data-delay="80"
+  >
+
+    <!-- EDUCATION -->
+    <section>
+
+      <h2>Education</h2>
+
+      <ul>
+
+        <li>
+          <strong>Cleveland State University</strong><br>
+          Bachelor of Science in Computer Science<br>
+          Expected Graduation: May 2027
+        </li>
+
+      </ul>
+
+    </section>
+
+
+
+    <!-- TECHNICAL SKILLS -->
+    <section>
+
+      <h2>Technical Skills</h2>
+
+      <ul>
+
+        <li>
+          <strong>Languages:</strong>
+          Java, Python, SQL, HTML, CSS, JavaScript
+        </li>
+
+        <li>
+          <strong>Frameworks &amp; Technologies:</strong>
+          Spring Boot, Flask, REST APIs, JWT, JPA / Hibernate
+        </li>
+
+        <li>
+          <strong>Databases:</strong>
+          PostgreSQL, SQLite
+        </li>
+
+        <li>
+          <strong>Tools:</strong>
+          Git, GitHub, Maven, JUnit, Docker, Postman,
+          IntelliJ IDEA, VS Code, Linux
+        </li>
+
+        <li>
+          <strong>Additional:</strong>
+          Object-Oriented Programming, Data Structures,
+          CRUD Applications, Authentication, Backend Development
+        </li>
+
+      </ul>
+
+    </section>
+
+
+
+    <!-- FOCUS -->
+    <section>
+
+      <h2>Current Focus</h2>
+
+      <p>
+        I am currently focused on strengthening my software engineering
+        skills through backend development, full-stack applications,
+        REST APIs, databases, authentication, and problem solving.
+      </p>
+
+      <p>
+        I am especially interested in software engineering and software
+        development roles where I can continue building reliable,
+        practical applications and grow as an engineer.
+      </p>
+
+    </section>
+
+
+
+    <!-- FEATURED PROJECTS -->
+    <section>
+
+      <h2>Featured Projects</h2>
+
+      <ul>
+
+        <li>
+          <strong>Campus Lost &amp; Found System</strong>
+          — Flask, SQLite, HTML/CSS/JavaScript
+        </li>
+
+        <li>
+          <strong>REST API with Authentication</strong>
+          — Java, Spring Boot, JWT
+        </li>
+
+        <li>
+          <strong>Internship Tracker App</strong>
+          — Python, Flask
+        </li>
+
+        <li>
+          <strong>Fake Job Detector</strong>
+          — Java, Spring Boot, PostgreSQL
+        </li>
+
+      </ul>
+
+      <div class="cta-row">
+
+        <a
+          class="btn btn-ghost"
+          href="projects.html"
+        >
+          View Projects
+        </a>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- RESUME DOWNLOAD -->
+    <section>
+
+      <h2>Resume</h2>
+
+      <p>
+        View or download my full resume for additional details about
+        my education, experience, skills, and projects.
+      </p>
+
+      <div class="cta-row">
+
+        <a
+          href="assets/resume.pdf"
+          target="_blank"
+          rel="noopener"
+          class="btn btn-primary"
+        >
+          View PDF Resume
+        </a>
+
+      </div>
+
+    </section>
+
+
   </main>
 
-  <footer class="reveal" data-anim="fade" data-delay="100">
-    <p>© 2025 Shivam Patel</p>
+
+
+  <!-- FOOTER -->
+  <footer
+    class="reveal"
+    data-anim="fade"
+    data-delay="100"
+  >
+
+    <p>
+      © 2026 Shivam Patel ·
+      <a href="contact.html">Get in touch</a>
+    </p>
+
   </footer>
 
+
+
   <script>
+
+    // Show elements when page loads
     window.addEventListener('DOMContentLoaded', () => {
-      document.querySelectorAll('.reveal[data-onload]').forEach(el => { el.classList.add('show'); });
+
+      document
+        .querySelectorAll('.reveal[data-onload]')
+        .forEach(el => {
+
+          const delay = el.getAttribute('data-delay');
+
+          if (delay) {
+            el.style.setProperty('--delay', delay + 'ms');
+          }
+
+          el.classList.add('show');
+
+        });
+
     });
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('show'); io.unobserve(e.target); }});
-    }, { threshold: 0.08 });
-    document.querySelectorAll('.reveal:not(.show)').forEach(el => io.observe(el));
+
+
+
+    // Scroll animation
+    const observer = new IntersectionObserver((entries) => {
+
+      entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+
+          const delay =
+            entry.target.getAttribute('data-delay');
+
+          if (delay) {
+            entry.target.style.setProperty(
+              '--delay',
+              delay + 'ms'
+            );
+          }
+
+          entry.target.classList.add('show');
+
+          observer.unobserve(entry.target);
+
+        }
+
+      });
+
+    }, {
+      threshold: 0.08
+    });
+
+
+    document
+      .querySelectorAll('.reveal:not(.show)')
+      .forEach(el => observer.observe(el));
+
   </script>
+
+
 </body>
+
 </html>
