@@ -38,8 +38,8 @@
     <h1>Projects</h1>
 
     <p>
-      Software projects I've built through coursework,
-      personal development, and hands-on practice
+      Software projects I've built through personal development,
+      coursework, and hands-on practice
     </p>
 
     <nav>
@@ -50,7 +50,6 @@
     </nav>
 
   </header>
-
 
 
   <!-- MAIN -->
@@ -75,7 +74,6 @@
     </p>
 
 
-
     <!-- FILTERS -->
     <div
       class="filters reveal"
@@ -83,47 +81,79 @@
       data-onload
     >
 
-      <button
-        class="pill active"
-        data-filter="all"
-      >
+      <button class="pill active" data-filter="all">
         All
       </button>
 
-      <button
-        class="pill"
-        data-filter="java"
-      >
+      <button class="pill" data-filter="java">
         Java
       </button>
 
-      <button
-        class="pill"
-        data-filter="python"
-      >
+      <button class="pill" data-filter="python">
         Python
       </button>
 
-      <button
-        class="pill"
-        data-filter="database"
-      >
+      <button class="pill" data-filter="database">
         Database
       </button>
 
     </div>
 
 
-
     <!-- PROJECT CARDS -->
     <div class="card-grid">
 
 
-      <!-- CAMPUS LOST & FOUND SYSTEM -->
+      <!-- 1. JOBFIT SHIELD -->
       <article
         class="card reveal"
         data-anim="up"
         data-delay="0"
+        data-tags="java database"
+      >
+
+        <h3>JobFit Shield</h3>
+
+        <p>
+          An AI-powered career platform designed to help students and
+          job seekers evaluate job postings, improve resume matching,
+          detect potentially fraudulent job listings, and organize
+          job applications.
+        </p>
+
+        <p>
+          Building the backend using Java, Spring Boot, and PostgreSQL
+          with REST APIs and a structured database architecture.
+          The platform is being developed to include authentication,
+          resume analysis, job safety scoring, candidate-job matching,
+          and application tracking.
+        </p>
+
+        <div class="tags">
+          <span>Java</span>
+          <span>Spring Boot</span>
+          <span>PostgreSQL</span>
+          <span>REST API</span>
+          <span>JPA</span>
+        </div>
+
+        <a
+          class="btn btn-small btn-primary"
+          href="https://github.com/shivam2458/JobFit_Shield"
+          target="_blank"
+          rel="noopener"
+        >
+          View on GitHub
+        </a>
+
+      </article>
+
+
+      <!-- 2. CAMPUS LOST & FOUND SYSTEM -->
+      <article
+        class="card reveal"
+        data-anim="up"
+        data-delay="80"
         data-tags="python database"
       >
 
@@ -136,8 +166,8 @@
         </p>
 
         <p>
-          Architected backend routing and the database schema using Flask
-          and SQLite, while implementing CRUD operations, search
+          Architected backend routing and the database schema using
+          Flask and SQLite while implementing CRUD operations, search
           functionality, and user workflows. Presented the completed
           application to faculty.
         </p>
@@ -155,12 +185,11 @@
       </article>
 
 
-
-      <!-- REST API WITH AUTHENTICATION -->
+      <!-- 3. REST API WITH AUTHENTICATION -->
       <article
         class="card reveal"
         data-anim="up"
-        data-delay="80"
+        data-delay="160"
         data-tags="java"
       >
 
@@ -172,8 +201,9 @@
         </p>
 
         <p>
-          Designed a layered architecture with protected endpoints,
-          input validation, and structured request and response handling.
+          Designed a layered backend architecture with protected
+          endpoints, input validation, and structured request and
+          response handling.
         </p>
 
         <div class="tags">
@@ -186,12 +216,11 @@
       </article>
 
 
-
-      <!-- INTERNSHIP TRACKER APP -->
+      <!-- 4. INTERNSHIP TRACKER APP -->
       <article
         class="card reveal"
         data-anim="up"
-        data-delay="160"
+        data-delay="240"
         data-tags="python"
       >
 
@@ -217,43 +246,9 @@
       </article>
 
 
-
-      <!-- FAKE JOB DETECTOR -->
-      <article
-        class="card reveal"
-        data-anim="up"
-        data-delay="240"
-        data-tags="java database"
-      >
-
-        <h3>Fake Job Detector</h3>
-
-        <p>
-          Developed a backend application focused on analyzing job
-          posting information and building the foundation for identifying
-          potentially fraudulent job listings.
-        </p>
-
-        <p>
-          Built the backend with Spring Boot and PostgreSQL, designed
-          the JobPosting data model, and implemented REST endpoints
-          for creating and retrieving job posting data.
-        </p>
-
-        <div class="tags">
-          <span>Java</span>
-          <span>Spring Boot</span>
-          <span>PostgreSQL</span>
-          <span>REST API</span>
-        </div>
-
-      </article>
-
-
     </div>
 
   </main>
-
 
 
   <!-- FOOTER -->
@@ -269,7 +264,6 @@
     </p>
 
   </footer>
-
 
 
   <script>
@@ -294,12 +288,9 @@
     });
 
 
-
     // Project filtering
     const pills = document.querySelectorAll('.pill');
-
     const cards = document.querySelectorAll('.card');
-
 
     pills.forEach(pill => {
 
@@ -312,7 +303,6 @@
         pill.classList.add('active');
 
         const filter = pill.dataset.filter;
-
 
         cards.forEach(card => {
 
@@ -330,7 +320,6 @@
       });
 
     });
-
 
 
     // Scroll animation
@@ -368,7 +357,6 @@
       .forEach(el => observer.observe(el));
 
   </script>
-
 
 </body>
 
