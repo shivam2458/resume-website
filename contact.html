@@ -1,57 +1,233 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
+
   <title>Contact | Shivam Patel</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  />
+
+  <meta
+    name="description"
+    content="Contact Shivam Patel for software engineering opportunities, collaboration, or professional networking."
+  />
+
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="assets/favicon.png">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <script
+    src="https://kit.fontawesome.com/a076d05399.js"
+    crossorigin="anonymous"
+  ></script>
 </head>
+
+
 <body>
-  <header class="reveal" data-anim="fade" data-onload>
+
+  <!-- HEADER -->
+  <header
+    class="reveal"
+    data-anim="fade"
+    data-onload
+  >
+
     <h1>Contact</h1>
+
+    <p>
+      Let's connect
+    </p>
+
     <nav>
       <a href="index.html">Home</a>
       <a href="about.html">Resume</a>
       <a href="projects.html">Projects</a>
       <a href="contact.html" class="active">Contact</a>
     </nav>
+
   </header>
 
-  <main class="container reveal" data-anim="up" data-onload data-delay="80">
-    <h2>Get in touch</h2>
-    <p>If you'd like to connect, feel free to email me or find me on LinkedIn and GitHub.</p>
 
+
+  <!-- MAIN -->
+  <main
+    class="container reveal"
+    data-anim="up"
+    data-onload
+    data-delay="80"
+  >
+
+    <h2>Get in Touch</h2>
+
+    <p>
+      I'm always open to connecting with recruiters, software engineers,
+      students, and professionals in the technology industry.
+    </p>
+
+    <p>
+      If you'd like to discuss software engineering opportunities,
+      projects, or just connect professionally, feel free to reach out.
+    </p>
+
+
+
+    <!-- CONTACT LINKS -->
     <ul class="contact-list">
+
       <li>
         <i class="fas fa-envelope"></i>
-        <a href="mailto:shivampatel2458@yahoo.com">shivampatel2458@yahoo.com</a>
+
+        <a href="mailto:shivampatel2458@yahoo.com">
+          shivampatel2458@yahoo.com
+        </a>
       </li>
+
+
       <li>
         <i class="fab fa-linkedin"></i>
-        <a href="https://www.linkedin.com/in/shivam-patel-252092273" target="_blank" rel="noopener">LinkedIn Profile</a>
+
+        <a
+          href="https://www.linkedin.com/in/shivam-patel-252092273"
+          target="_blank"
+          rel="noopener"
+        >
+          LinkedIn Profile
+        </a>
       </li>
+
+
       <li>
         <i class="fab fa-github"></i>
-        <a href="https://github.com/shivam2458" target="_blank" rel="noopener">GitHub Profile</a>
+
+        <a
+          href="https://github.com/shivam2458"
+          target="_blank"
+          rel="noopener"
+        >
+          GitHub Profile
+        </a>
       </li>
+
     </ul>
+
+
+
+    <!-- CTA -->
+    <div class="cta-row">
+
+      <a
+        class="btn btn-primary"
+        href="mailto:shivampatel2458@yahoo.com"
+      >
+        Email Me
+      </a>
+
+      <a
+        class="btn btn-ghost"
+        href="https://www.linkedin.com/in/shivam-patel-252092273"
+        target="_blank"
+        rel="noopener"
+      >
+        Connect on LinkedIn
+      </a>
+
+      <a
+        class="btn btn-ghost"
+        href="https://github.com/shivam2458"
+        target="_blank"
+        rel="noopener"
+      >
+        View GitHub
+      </a>
+
+    </div>
+
   </main>
 
-  <footer class="reveal" data-anim="fade" data-delay="100">
-    <p>© 2025 Shivam Patel</p>
+
+
+  <!-- FOOTER -->
+  <footer
+    class="reveal"
+    data-anim="fade"
+    data-delay="100"
+  >
+
+    <p>
+      © 2026 Shivam Patel
+    </p>
+
   </footer>
 
+
+
   <script>
+
+    // Show elements when page loads
     window.addEventListener('DOMContentLoaded', () => {
-      document.querySelectorAll('.reveal[data-onload]').forEach(el => el.classList.add('show'));
+
+      document
+        .querySelectorAll('.reveal[data-onload]')
+        .forEach(el => {
+
+          const delay = el.getAttribute('data-delay');
+
+          if (delay) {
+            el.style.setProperty('--delay', delay + 'ms');
+          }
+
+          el.classList.add('show');
+
+        });
+
     });
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('show'); io.unobserve(e.target); }});
-    }, { threshold: 0.08 });
-    document.querySelectorAll('.reveal:not(.show)').forEach(el => io.observe(el));
+
+
+
+    // Scroll animation
+    const observer = new IntersectionObserver((entries) => {
+
+      entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+
+          const delay =
+            entry.target.getAttribute('data-delay');
+
+          if (delay) {
+            entry.target.style.setProperty(
+              '--delay',
+              delay + 'ms'
+            );
+          }
+
+          entry.target.classList.add('show');
+
+          observer.unobserve(entry.target);
+
+        }
+
+      });
+
+    }, {
+      threshold: 0.08
+    });
+
+
+    document
+      .querySelectorAll('.reveal:not(.show)')
+      .forEach(el => observer.observe(el));
+
   </script>
+
 </body>
+
 </html>
